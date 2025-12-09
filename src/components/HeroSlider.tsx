@@ -4,7 +4,7 @@ import hero2 from "../assets/hero2.jpg";
 import hero3 from "../assets/hero3.jpg";
 import hero4 from "../assets/hero4.jpg";
 
-
+// ✅ FIX: Allow imported images (string or imported module)
 type Slide = {
   id: number;
   title: string;
@@ -18,7 +18,7 @@ const slides: Slide[] = [
     id: 1,
     title: "Art by Kiku",
     subtitle: "Hand-painted watercolor portraits with soul and emotion.",
-     img: hero1,
+    img: hero1,
     bg: "from-[#FFEDE9] via-[#FFD4CF] to-[#FFAEA9]",
   },
   {
@@ -63,7 +63,6 @@ export default function HeroSlider() {
   return (
     <section id="home" className="pt-20 pb-16">
       <div className="relative h-[70vh] min-h-[520px] w-full overflow-hidden rounded-none md:rounded-3xl">
-
         {slides.map((s, i) => (
           <div
             key={s.id}
@@ -72,19 +71,18 @@ export default function HeroSlider() {
               index === i ? "opacity-100" : "opacity-0"
             }`}
           >
-
-            {/* Soft pastel gradient background */}
+            {/* Background Gradient */}
             <div
               className={`absolute inset-0 bg-gradient-to-br ${s.bg} opacity-60`}
             />
 
-            {/* Clean hero image visible clearly */}
+            {/* Hero Image */}
             <div
               className="absolute inset-0 bg-cover bg-center opacity-90"
               style={{ backgroundImage: `url(${s.img})` }}
             />
 
-            {/* Soft vignette for readability */}
+            {/* Vignette */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/10 to-transparent" />
 
             {/* Content */}
@@ -93,11 +91,9 @@ export default function HeroSlider() {
                 <h1 className="text-4xl font-tan leading-tight sm:text-5xl md:text-6xl">
                   {s.title}
                 </h1>
-
                 <p className="mt-4 text-lg md:text-xl text-white/90">
                   {s.subtitle}
                 </p>
-
                 <div className="mt-6 flex flex-wrap gap-3">
                   <a
                     href="#gallery"
@@ -105,7 +101,6 @@ export default function HeroSlider() {
                   >
                     View Gallery
                   </a>
-
                   <a
                     href="#contact"
                     className="rounded-full bg-white/20 border border-white/50 px-6 py-3 font-semibold text-white backdrop-blur-sm hover:bg-white/30"
@@ -115,7 +110,6 @@ export default function HeroSlider() {
                 </div>
               </div>
             </div>
-
           </div>
         ))}
 
