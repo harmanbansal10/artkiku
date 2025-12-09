@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Add your custom font inside a layer */
+@layer base {
+  @font-face {
+    font-family: "TanMeringue";
+    src: url("/fonts/tan-meringue.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
+/* Create font utility (Tailwind v4 way) */
+@layer utilities {
+  .font-tan {
+    font-family: "TanMeringue", serif;
+  }
+}
