@@ -1,4 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+import hero1 from "../assets/hero1.jpg";
+import hero2 from "../assets/hero2.jpg";
+import hero3 from "../assets/hero3.jpg";
+import hero4 from "../assets/hero4.jpg";
+
 
 type Slide = {
   id: number;
@@ -13,28 +18,28 @@ const slides: Slide[] = [
     id: 1,
     title: "Art by Kiku",
     subtitle: "Hand-painted watercolor portraits with soul and emotion.",
-    img: "/img/hero1.jpg",
+     img: hero1,
     bg: "from-[#FFEDE9] via-[#FFD4CF] to-[#FFAEA9]",
   },
   {
     id: 2,
     title: "Watercolor Florals",
     subtitle: "Soft botanical illustrations perfect for décor and gifting.",
-    img: "/img/hero2.jpg",
+    img: hero2,
     bg: "from-[#FFEFE6] via-[#FFCFC1] to-[#FF9F8A]",
   },
   {
     id: 3,
     title: "Custom Paintings",
     subtitle: "Commission personalized artwork for your special moments.",
-    img: "/img/hero3.jpg",
+    img: hero3,
     bg: "from-[#FDEEE5] via-[#F8D4C6] to-[#E8A898]",
   },
   {
     id: 4,
     title: "Live Classes",
     subtitle: "Learn watercolor techniques with simple and fun lessons.",
-    img: "/img/hero4.jpg",
+    img: hero4,
     bg: "from-[#FFEDE9] via-[#FFD4CF] to-[#FFAEA9]",
   },
 ];
