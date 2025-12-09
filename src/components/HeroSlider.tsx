@@ -1,10 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import hero1 from "../assets/hero1.jpg";
-import hero2 from "../assets/hero2.jpg";
-import hero3 from "../assets/hero3.jpg";
-import hero4 from "../assets/hero4.jpg";
 
-// ✅ FIX: Allow imported images (string or imported module)
 type Slide = {
   id: number;
   title: string;
@@ -18,28 +13,28 @@ const slides: Slide[] = [
     id: 1,
     title: "Art by Kiku",
     subtitle: "Hand-painted watercolor portraits with soul and emotion.",
-    img: hero1,
+    img: "/img/hero1.jpg",
     bg: "from-[#FFEDE9] via-[#FFD4CF] to-[#FFAEA9]",
   },
   {
     id: 2,
     title: "Watercolor Florals",
     subtitle: "Soft botanical illustrations perfect for décor and gifting.",
-    img: hero2,
+    img: "/img/hero2.jpg",
     bg: "from-[#FFEFE6] via-[#FFCFC1] to-[#FF9F8A]",
   },
   {
     id: 3,
     title: "Custom Paintings",
     subtitle: "Commission personalized artwork for your special moments.",
-    img: hero3,
+    img: "/img/hero3.jpg",
     bg: "from-[#FDEEE5] via-[#F8D4C6] to-[#E8A898]",
   },
   {
     id: 4,
     title: "Live Classes",
     subtitle: "Learn watercolor techniques with simple and fun lessons.",
-    img: hero4,
+    img: "/img/hero4.jpg",
     bg: "from-[#FFEDE9] via-[#FFD4CF] to-[#FFAEA9]",
   },
 ];
@@ -63,6 +58,7 @@ export default function HeroSlider() {
   return (
     <section id="home" className="pt-20 pb-16">
       <div className="relative h-[70vh] min-h-[520px] w-full overflow-hidden rounded-none md:rounded-3xl">
+
         {slides.map((s, i) => (
           <div
             key={s.id}
@@ -71,18 +67,19 @@ export default function HeroSlider() {
               index === i ? "opacity-100" : "opacity-0"
             }`}
           >
-            {/* Background Gradient */}
+
+            {/* Soft pastel gradient background */}
             <div
               className={`absolute inset-0 bg-gradient-to-br ${s.bg} opacity-60`}
             />
 
-            {/* Hero Image */}
+            {/* Clean hero image visible clearly */}
             <div
               className="absolute inset-0 bg-cover bg-center opacity-90"
               style={{ backgroundImage: `url(${s.img})` }}
             />
 
-            {/* Vignette */}
+            {/* Soft vignette for readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/10 to-transparent" />
 
             {/* Content */}
@@ -91,16 +88,19 @@ export default function HeroSlider() {
                 <h1 className="text-4xl font-tan leading-tight sm:text-5xl md:text-6xl">
                   {s.title}
                 </h1>
+
                 <p className="mt-4 text-lg md:text-xl text-white/90">
                   {s.subtitle}
                 </p>
+
                 <div className="mt-6 flex flex-wrap gap-3">
                   <a
                     href="#gallery"
-                    className="rounded-full bg-[#6EC5C0] px-6 py-3 font-semibold shadow hover:bg-[#37928d]"
+                    className="rounded-full bg-[#6EC5C0] px-6 py-3 font-semibold shadow hover:bg-[#5da9a5]"
                   >
                     View Gallery
                   </a>
+
                   <a
                     href="#contact"
                     className="rounded-full bg-white/20 border border-white/50 px-6 py-3 font-semibold text-white backdrop-blur-sm hover:bg-white/30"
@@ -110,6 +110,7 @@ export default function HeroSlider() {
                 </div>
               </div>
             </div>
+
           </div>
         ))}
 
