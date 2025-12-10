@@ -9,7 +9,7 @@ export default function Footer() {
             <img src={logo} alt="North Maple Digital" className="h-7 w-auto" />
           </div>
           <p className="mt-4 text-sm text-gray-600 max-w-md">
-            We build high-performance websites and growth campaigns for Canadian businesses from our home in Kitchener.
+            We create custom hand-painted artwork that adds beauty, meaning, and emotion to your space.
           </p>
         </div>
 
