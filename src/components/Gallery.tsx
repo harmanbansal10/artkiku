@@ -8,12 +8,24 @@ export default function Gallery() {
     "/img/g4.jpg",
     "/img/g5.jpg",
     "/img/g6.jpg",
+    "/img/g7.jpg",
+    "/img/g8.jpg",
+    "/img/g9.jpg",
+    "/img/g10.jpg",
+    "/img/g11.jpg",
+    "/img/g12.jpg",
   ];
 
-  const [visibleCount, setVisibleCount] = useState(6);
+  const LOAD_COUNT = 6; // Number of images to load each time
+
+  const [visibleCount, setVisibleCount] = useState(LOAD_COUNT);
   const visibleImages = allImages.slice(0, visibleCount);
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + LOAD_COUNT);
+  };
 
   return (
     <section id="gallery" className="py-16 bg-[#F8F8F6]">
@@ -24,7 +36,7 @@ export default function Gallery() {
           Gallery
         </h2>
 
-        {/* Uniform grid layout */}
+        {/* Image Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {visibleImages.map((src) => (
             <div
@@ -41,11 +53,11 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* View More */}
+        {/* View More Button */}
         {visibleCount < allImages.length && (
           <div className="flex justify-center mt-10">
             <button
-              onClick={() => setVisibleCount(visibleCount + 3)}
+              onClick={handleLoadMore}
               className="px-8 py-3 rounded-full bg-[#6EC5C0] text-white font-semibold shadow hover:bg-[#5ab2ad]"
             >
               View More
