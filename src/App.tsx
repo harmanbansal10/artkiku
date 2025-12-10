@@ -40,9 +40,9 @@ export default function App() {
                   icon: "🌸",
                 },
                 {
-                  title: "Custom Art Commissions",
-                  desc: "Wedding invites, gifts, home décor pieces crafted with care.",
-                  icon: "🎁",
+                  title: "Pet Portraits",
+                  desc: "Beautiful watercolor paintings of your furry friends.",
+                  icon: "🐾",
                 },
                 {
                   title: "Bookmarks & Mini Art",

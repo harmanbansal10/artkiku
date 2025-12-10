@@ -14,11 +14,11 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="font-semibold text-gray-900">Company</h3>
+          <h3 className="font-semibold text-gray-900">Quick Links</h3>
           <ul className="mt-3 space-y-2 text-sm text-gray-600">
             <li><a href="#about" className="hover:text-gray-900">About</a></li>
-            <li><a href="#work" className="hover:text-gray-900">Case Studies</a></li>
-            <li><a href="#blog" className="hover:text-gray-900">Blog</a></li>
+            <li><a href="#gallery" className="hover:text-gray-900">Gallery</a></li>
+            <li><a href="#services" className="hover:text-gray-900">Services</a></li>
           </ul>
         </div>
 
