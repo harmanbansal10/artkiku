@@ -82,6 +82,8 @@ export default function HeroSlider() {
             {/* Soft vignette for readability */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/10 to-transparent" />
 
+            <div className="absolute inset-0 bg-black/40" />
+
             {/* Content */}
             <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6">
               <div className="max-w-2xl text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
