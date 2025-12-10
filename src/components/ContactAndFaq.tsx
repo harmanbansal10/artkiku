@@ -18,11 +18,11 @@ const faqs: Faq[] = [
   },
   {
     q: "How long does a custom artwork take?",
-    a: "Most custom pieces take 5–10 days depending on complexity. Urgent timelines may be available.",
+    a: "Most custom pieces take 5-10 days depending on complexity. Urgent timelines may be available.",
   },
   {
     q: "Do you ship artwork?",
-    a: "Yes, shipping is available across India. You can also request digital high-resolution copies.",
+    a: "Yes, shipping is available in Canada and across globally. You can also request digital high-resolution copies.",
   },
 ];
 
