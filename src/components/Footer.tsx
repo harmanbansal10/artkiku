@@ -25,8 +25,8 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold text-gray-900">Contact</h3>
           <ul className="mt-3 space-y-2 text-sm text-gray-600">
-            <li>Kitchener, Ontario</li>
-            <li><a href="mailto:hello@northmaple.ca" className="hover:text-gray-900">hello@northmaple.ca</a></li>
+            <li>vancouver, BC</li>
+            <li><a href="mailto:hello@northmaple.ca" className="hover:text-gray-900">artbykiku1@gmail.com</a></li>
             <li><a href="#contact" className="hover:text-gray-900">Get a Quote →</a></li>
           </ul>
         </div>
@@ -34,7 +34,7 @@ export default function Footer() {
 
       <div className="border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-6 py-4 text-xs text-gray-500 flex flex-wrap items-center justify-between gap-2">
-          <p>© {new Date().getFullYear()} North Maple Digital. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Art By Kiku. All rights reserved.</p>
           <p>Privacy · Terms</p>
         </div>
       </div>
